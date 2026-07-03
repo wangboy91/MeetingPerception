@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m 'chore: initialize MeetingPerception project with engineering docs *)",
+      "Bash(git push *)"
     ]
   }
 }

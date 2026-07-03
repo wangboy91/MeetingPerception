@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+app/__init__.py
+app/main.py
+app/api/__init__.py
+app/api/http.py
+app/api/websocket.py
+app/audio/__init__.py
+app/schemas/__init__.py
+app/schemas/meeting.py
+app/schemas/websocket.py
+meeting_copilot_ai_service.egg-info/PKG-INFO
+meeting_copilot_ai_service.egg-info/SOURCES.txt
+meeting_copilot_ai_service.egg-info/dependency_links.txt
+meeting_copilot_ai_service.egg-info/requires.txt
+meeting_copilot_ai_service.egg-info/top_level.txt
+tests/test_health.py

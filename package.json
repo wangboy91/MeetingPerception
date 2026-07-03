@@ -1,0 +1,18 @@
+{
+  "name": "meeting-copilot-local",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Local-first desktop meeting copilot monorepo.",
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "dev:desktop": "corepack pnpm --filter @meeting-copilot/desktop dev",
+    "dev:ai": "corepack pnpm --filter @meeting-copilot/ai-service dev",
+    "build:desktop": "corepack pnpm --filter @meeting-copilot/desktop build",
+    "package:windows": "corepack pnpm --filter @meeting-copilot/desktop tauri build",
+    "lint": "corepack pnpm --filter @meeting-copilot/shared lint && corepack pnpm --filter @meeting-copilot/desktop lint && corepack pnpm --filter @meeting-copilot/ai-service lint",
+    "test": "corepack pnpm --filter @meeting-copilot/shared test && corepack pnpm --filter @meeting-copilot/desktop test && corepack pnpm --filter @meeting-copilot/ai-service test"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}

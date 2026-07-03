@@ -107,6 +107,21 @@ Windows 采用 loopback capture。
 → 推送 AudioFrame(track=system)
 ```
 
+macOS 系统输出采集分两种路线：
+
+```text
+ScreenCaptureKit 系统音频捕获
+或 BlackHole / Loopback 等虚拟音频设备
+→ 重采样到 16k mono
+→ 推送 AudioFrame(track=system)
+```
+
+优先策略：
+
+- Windows：优先 WASAPI loopback；
+- macOS：优先 ScreenCaptureKit，若权限或系统版本约束较重，再支持虚拟音频设备方案；
+- 两个平台都必须保留 mic/system 双轨，不在采集层混音。
+
 ### 5.3 双轨同步
 
 不要在采集层强行合并 mic 和 system。
